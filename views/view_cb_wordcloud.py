@@ -106,7 +106,7 @@ def draw_view(url):
             chart_cb_wordcloud.on('click', function(x){
                 if(x.name == undefined) {return true;}
                 if ($('#cb_detail_list').length==0){
-                    $(document.body).append('<div id=\\'cb_detail_list\\'></div>')
+                    $(document.body).append('<div id=\\'cb_detail_list\\' class=\\'container\\'></div>')
                 }
                 $.get('/view_cb_wordcloud_detail.html?key=' + encodeURIComponent(x.name), function(result){
                     $('#cb_detail_list').html(result)
